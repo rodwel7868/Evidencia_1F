@@ -4,43 +4,43 @@ Evidencia 2
 package citasmedicas;
 
 class Cita {
-    private String identificador;
-    private String fecha;
-    private String hora;
+    private int id;
+    private String fechaHora;
     private String motivo;
-    private Doctor doctor;
-    private Paciente paciente;
+    private int doctorId;
+    private int pacienteId;
 
-    public Cita(String identificador, String fecha, String hora, String motivo, Doctor doctor, Paciente paciente) {
-        this.identificador = identificador;
-        this.fecha = fecha;
-        this.hora = hora;
+    public Cita(int id, String fechaHora, String motivo, int doctorId, int pacienteId) {
+        this.id = id;
+        this.fechaHora = fechaHora;
         this.motivo = motivo;
-        this.doctor = doctor;
-        this.paciente = paciente;
+        this.doctorId = doctorId;
+        this.pacienteId = pacienteId;
     }
 
-    public String getIdentificador() {
-        return identificador;
+    public int getId() {
+        return id;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
-
-    public String getHora() {
-        return hora;
+    public String getFechaHora() {
+        return fechaHora;
     }
 
     public String getMotivo() {
         return motivo;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    public int getDoctorId() {
+        return doctorId;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public int getPacienteId() {
+        return pacienteId;
     }
+
+    @Override
+    public String toString() {
+        return "Cita [id=" + id + ", fechaHora=" + fechaHora + ", motivo=" + motivo
+                + ", doctorId=" + doctorId + ", pacienteId=" + pacienteId;
+}
 }
